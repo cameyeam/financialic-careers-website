@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Financialolic Careers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+      #banner {
+        heigth: 360px;
+        width: 100%;
+        object-fit:cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-2 mb-2"> {{company_name}} Careers 
+      </h1>
+      <img class="img-fluid" id="banner" src="https://financialic-careers-website.camerenfarr.repl.co/static/banner.jpeg"
+      <h2 class="text-center mt-2 mb-2"> About Financialolic</h2>
+      <p class="lead">
+      Welcome to Financialolic, your one-stop destination for top-of-the-line predictive financial modeling products and services. At Financialolic, we understand that in the fast-paced and competitive world of finance, accurate predictions are vital for making sound decisions. Our dedicated team of financial experts, data scientists, and software engineers has crafted an exceptional range of cutting-edge algorithms and models that harness the power of big data and advanced analytics to provide you with unparalleled insights into market trends and future financial outcomes.
+      </p>
+      <h2 class="text-center mt-2 mb-2"> Open Positions </h2>
+      <div> 
+        {% for job in jobs %}
+           {% include 'jobitem.html' %}         
+        {% endfor %}
+        </div>
+      <div class="text-center">
+      <button class="btn btn-primary btn-lg">Contact Us</button>
+      <p class="mt-4">Copyright 2023, Financialolic</p> 
+    </div>
+  </body>
+</html>
